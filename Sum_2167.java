@@ -20,19 +20,10 @@ public class Sum_2167 {
 			}
 		}
 		
-		for(int i=0;i<n;i++) {
-			for(int j=0;j<m;j++) {
-				System.out.print(arr[i][j]);
-			}
-			System.out.print("\n");
-		}
-		
-		System.out.println("x 입력 : ");
 		x=sc.nextInt();
 		int[] brr=new int[x];
 		
 		for(int i=0;i<x;i++) {
-			System.out.println("4개 입력 : ");
 			x1=sc.nextInt();
 			y1=sc.nextInt();
 			x2=sc.nextInt();
