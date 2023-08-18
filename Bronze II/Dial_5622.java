@@ -10,7 +10,9 @@ public class Main {
 		
 		String input = br.readLine();
 		int answer = input.length();
-		
+
+		// switch로도 되지만 case 65,66,67: 
+		// 백준은 인식을 못함
 		for(int i=0; i<input.length();i++) {
 			int num = (int)input.charAt(i);
 			
