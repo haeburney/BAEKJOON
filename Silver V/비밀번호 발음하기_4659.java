@@ -15,8 +15,7 @@ public class Main {
 
         while (true) {
             boolean hasVowel = false; // 모음이 있는가
-            boolean hasLessThan3ConsecutiveVandC = true; // 모음 혹은 자음이 3개 미만인가
-            boolean noRepeatingChars = true; // 같은 글자
+            boolean acceptable = true; // 모음 혹은 자음이 3개 미만인가 & 같은 글자 검사
             String password = br.readLine();
 
             if (password.equals("end")) {
@@ -38,21 +37,20 @@ public class Main {
                     consonant++;
                 }
 
-
-
                 if (vowel >= 3 || consonant >= 3) {
-                    hasLessThan3ConsecutiveVandC = false;
+                    acceptable = false;
                     break;
                 }
 
                 if (i < password.length() - 1) {
                     if (password.charAt(i) == password.charAt(i + 1) && passwordNum != 101 && passwordNum != 111) {
-                        noRepeatingChars = false;
+                        acceptable = false;
+                        break;
                     }
                 }
             }
 
-            if (hasVowel == false || hasLessThan3ConsecutiveVandC == false || noRepeatingChars == false) {
+            if (hasVowel == false || acceptable == false) {
                 bw.write("<" + password + "> is not acceptable.\n");
             } else {
                 bw.write("<" + password + "> is acceptable.\n");
