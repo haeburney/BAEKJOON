@@ -1,5 +1,3 @@
-package net.innofactory.lecture.hkim;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -8,7 +6,7 @@ import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
 public class Main {
-    public String score(int[] arr, int sum) {
+    public double score(int[] arr, int sum) {
         double avg = (double) sum / arr.length;
         int count = 0;
 
@@ -19,9 +17,8 @@ public class Main {
         }
 
         double answer = (double) count / arr.length * 100;
-        String formattedNumber = String.format("%.3f", answer);
-
-        return formattedNumber;
+       
+        return answer;
     }
 
     public static void main(String[] args) throws IOException {
@@ -40,7 +37,7 @@ public class Main {
                 arr[j] = Integer.parseInt(st.nextToken());
                 sum += arr[j];
             }
-            bw.write(m.score(arr, sum) + "%\n");
+            bw.write(String.format("%.3f%%\n", m.score(arr, sum)));
         }
 
         bw.flush();
