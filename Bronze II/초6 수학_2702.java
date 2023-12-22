@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Cho6_2702 {
 	public static int answer1;
 	public static int answer2;
-	public static int multiple[]; //공배수
-	public static int divisor[]; //공약수
+	public static int multiple[]; 
+	public static int divisor[]; 
 	
 	public static void main(String args[]) {
 		Scanner sc=new Scanner(System.in);
