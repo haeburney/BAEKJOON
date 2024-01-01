@@ -1,5 +1,3 @@
-package baekjoon;
-
 import java.util.Scanner;
 
 public class CommonDivisor_1934 {
